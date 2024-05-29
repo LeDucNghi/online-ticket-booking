@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Loading } from '@/components/loading/loading';
+import { Loading } from '@/components/common/loading/loading';
 
 export interface ILoadingPageProps {
 }

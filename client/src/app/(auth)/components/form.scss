@@ -1,0 +1,21 @@
+form {
+    .form-submit {
+        .form-button {
+            border-radius: 1.6rem;
+            padding: 0.625rem 3.06rem;
+            background-image: -webkit-linear-gradient(169deg, #5560ff 17%, #aa52a1 63%, #ff4343 100%);
+        }
+    }
+
+    .form-checkgroup {
+        color: #6d7bba;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+
+        margin: 1rem 0;
+
+        a {
+            font-weight: 600;
+        }
+    }
+}

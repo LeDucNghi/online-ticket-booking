@@ -2,7 +2,7 @@ import "./main-layout.scss";
 
 import * as React from 'react';
 
-import { Banner } from "@/components/banner/banner";
+import { Banner } from "@/components/common/banner/banner";
 
 export interface IMainLayoutProps {
   children: React.ReactNode

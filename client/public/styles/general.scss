@@ -1,0 +1,63 @@
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-space-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    border-radius: 1.6rem;
+    padding: 0.625rem 3.06rem;
+    background-image: -webkit-linear-gradient(169deg, #5560ff 17%, #aa52a1 63%, #ff4343 100%);
+}
+
+@mixin img-fit($width: 100%, $height: 100%, $objectFit: cover, $radius: 0%) {
+    width: $width;
+    height: $height;
+    object-fit: $objectFit;
+    border-radius: $radius;
+}
+
+@mixin line-clamp($line: 1) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    white-space: pre-wrap;
+}
+
+@mixin backgroundImg($bg: "", $size: contain) {
+    background-image: url($bg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: $size;
+}

@@ -1,0 +1,34 @@
+.MuiTextField-root {
+    color: white;
+
+    & label {
+        color: orange;
+
+        &.Mui-focused {
+            color: orange;
+            font-weight: 600;
+        }
+    }
+    // focused color for input with variant='standard'
+    & .MuiInput-underline:after {
+        border-bottom-color: orange;
+        color: orange;
+    }
+
+    // .MuiInput-root {
+    //     &.Mui-focused {
+    //         color: white;
+    //     }
+    // }
+
+    // focused color for input with variant='filled'
+    & .MuiFilledInput-underline:after {
+        border-bottom-color: orange;
+    }
+    // focused color for input with variant='outlined'
+    & .MuiOutlinedInput-root {
+        &.Mui-focused fieldset {
+            border-color: orange;
+        }
+    }
+}

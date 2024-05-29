@@ -1,0 +1,107 @@
+@import "../../../../public/styles/index.scss";
+
+.auth-container {
+    width: 100%;
+    height: 100vh;
+
+    @include backgroundImg("../../public/assets/account-bg.jpg", cover);
+
+    background-color: transparent;
+
+    .auth-link {
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+
+        color: white;
+
+        border: 1px solid #606a7a;
+    }
+
+    .auth-card {
+        width: 33rem;
+
+        padding: 3rem 2.8rem;
+
+        background: transparent;
+
+        .auth-card-header {
+            text-transform: uppercase;
+            text-align: center;
+
+            margin-bottom: 2.2rem;
+
+            span {
+                font-size: 1.5rem;
+                color: $green;
+                font-weight: 600;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 600;
+                color: white;
+            }
+        }
+
+        .auth-card-option {
+            width: 100%;
+
+            color: #dbe2fb;
+            font-weight: 600;
+
+            margin: 1rem 0;
+
+            a {
+                color: $green;
+                font-weight: 600;
+            }
+        }
+
+        .auth-card-divider {
+            color: #dbe2fb;
+
+            margin: 1rem 0;
+
+            &::before {
+                border-top: thin solid #616b7b;
+            }
+
+            &::after {
+                border-top: thin solid #616b7b;
+            }
+        }
+
+        .auth-card-social {
+            li {
+                width: 3.5rem;
+                height: 3.5rem;
+
+                padding: 0.5rem;
+
+                .social-icon {
+                    width: 100%;
+                    height: 100%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    border: 1px solid #606a7a;
+
+                    transition: all 0.5s;
+
+                    &:hover {
+                        background: linear-gradient(169deg, #5560ff 17%, #aa52a1 63%, #ff4343 100%);
+
+                        transition: all 0.5s;
+                    }
+
+                    img {
+                        @include img-fit(90%, 90%);
+                    }
+                }
+            }
+        }
+    }
+}

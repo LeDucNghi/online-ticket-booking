@@ -1,0 +1,148 @@
+@import "../../../public/styles/index.scss";
+
+footer {
+    position: relative;
+
+    width: 100%;
+    height: 38.375rem;
+
+    background: $mainColor;
+
+    img {
+        @include img-fit(100%, 50%);
+    }
+
+    .footer-newsletter {
+        position: relative;
+        margin: 0 auto;
+        top: -5rem;
+
+        .newsletter-wrapper {
+            position: relative;
+
+            margin: 2rem auto 0 auto;
+
+            width: 45%;
+
+            padding: 1rem 0;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            p {
+                font-weight: 600;
+                color: #c8bce4;
+                margin-top: 1.5rem;
+            }
+
+            .newsletter-subcribe {
+                position: relative;
+
+                width: 100%;
+                height: 3.125rem;
+
+                input {
+                    position: absolute;
+
+                    width: 100%;
+                    height: 100%;
+
+                    padding: 0.0625rem 10rem 0.0625rem 1.25rem;
+
+                    border-radius: 1.6rem;
+                    background: transparent;
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                }
+
+                button {
+                    position: absolute;
+                    width: auto;
+                    height: 100%;
+
+                    right: 0;
+                    top: 0;
+
+                    background-image: -webkit-linear-gradient(169deg, #5560ff 17%, #aa52a1 63%, #ff4343 100%);
+
+                    -webkit-box-shadow: 0px 10px 15px 0px rgba(59, 55, 188, 0.5);
+
+                    box-shadow: 0px 10px 15px 0px rgba(59, 55, 188, 0.5);
+
+                    padding: 0.5rem 40px;
+                    border-radius: 25px;
+                    border: none;
+
+                    color: white;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    .footer-content {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 75%;
+        height: 9.4rem;
+
+        .footer-top {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            padding-bottom: 0.7rem;
+
+            .footer-logo {
+                width: 10rem;
+                height: 90%;
+
+                img {
+                    @include img-fit();
+                }
+            }
+
+            .footer-social {
+                display: flex;
+
+                li {
+                    padding: 0.47rem;
+
+                    .icon {
+                        color: white;
+                        border: 0.01rem solid rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+        }
+
+        .footer-bottom {
+            padding: 1.6rem 0;
+
+            color: white;
+            font-weight: 600;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+
+                width: 40%;
+
+                li {
+                    button {
+                        text-transform: capitalize;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+
+            width: 100%;
+        }
+    }
+}

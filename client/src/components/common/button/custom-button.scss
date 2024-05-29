@@ -1,0 +1,16 @@
+.custom-button {
+    border-radius: 1.6rem;
+    padding: 0.625rem 3.06rem;
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease-in-out;
+
+    &.isActive {
+        background: linear-gradient(169deg, #5560ff 17%, #aa52a1 63%, #ff4343 100%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:hover {
+        background: linear-gradient(169deg, #5560ff 17%, #aa52a1 63%, #ff4343 100%);
+        transition: all 0.5s ease-in-out;
+    }
+}

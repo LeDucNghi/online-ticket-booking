@@ -9,7 +9,6 @@ export interface IMovieProps {
 }
 
 export default function MovieItemPage({ params: { id } }: IMovieProps) {
-    console.log("🚀 ~ MovieItemPage ~ id:", id)
     return (
         <MainLayout bannerBg='/assets/banner02.jpg'>
             movie item page

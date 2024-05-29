@@ -3,8 +3,7 @@
 import * as React from 'react';
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Button } from '@mui/material';
-import { CustomButton } from '@/components/button/custom-button';
+import { CustomButton } from '@/components/common/button/custom-button';
 import Image from 'next/image';
 import { images } from '@/constants';
 import { useRouter } from 'next/navigation';

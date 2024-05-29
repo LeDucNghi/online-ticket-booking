@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import { Banner } from '@/components/banner/banner';
 import { MainLayout } from '@/components/Layouts/main/main-layout';
 
 export interface IpageProps {

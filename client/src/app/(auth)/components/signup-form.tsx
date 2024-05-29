@@ -6,8 +6,8 @@ import * as React from 'react';
 
 import { SubmitHandler, useForm } from 'react-hook-form';
 
-import { CustomCheckbox } from "@/components/checkbox/checkbox";
-import { InputField } from "@/components/input-field/input-field";
+import { CustomCheckbox } from "@/components/common/checkbox/checkbox";
+import { InputField } from "@/components/common/input-field/input-field";
 import Link from "next/link";
 import { LoadingButton } from '@mui/lab';
 

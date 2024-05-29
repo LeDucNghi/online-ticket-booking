@@ -1,7 +1,7 @@
 "use client"
 
-import { CustomButton } from "@/components/button/custom-button";
-import { ItemCard } from "@/components/item-card/item-card";
+import { CustomButton } from "@/components/common/button/custom-button";
+import { ItemCard } from "@/components/common/item-card/item-card";
 import { Movie } from "@/models";
 import { useState } from "react";
 

@@ -1,8 +1,6 @@
 "use client"
 
-import "./header.scss"
-
-import * as React from 'react';
+import "./header.scss";
 
 import { usePathname, useRouter } from "next/navigation";
 
@@ -10,7 +8,6 @@ import { Button } from "@mui/material";
 import Image from 'next/image';
 import Link from "next/link";
 import { images } from '@/constants';
-import { useWindowSize } from "@/hooks/useWindow";
 
 export interface IHeaderProps {
 }

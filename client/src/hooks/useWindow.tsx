@@ -3,7 +3,7 @@ import * as React from 'react';
 export interface IuseWindowProps {
 }
 
-export function useWindow(props: IuseWindowProps) {
+export function useWindowSize(props: IuseWindowProps) {
     const [windowInnerWidth, setWindowInnerWidth] = React.useState(
         window.innerWidth
     );

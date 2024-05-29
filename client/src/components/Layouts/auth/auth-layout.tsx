@@ -9,7 +9,6 @@ import { Divider, Icon, IconButton, Paper, Tooltip } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Image from "next/image";
 import Link from "next/link";
-import PageTransition from "@/components/loading/page-transition";
 import { authSocial } from "@/constants";
 import { useRouter } from "next/navigation";
 

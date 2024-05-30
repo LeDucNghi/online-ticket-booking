@@ -7,7 +7,7 @@ export interface IBlogsProps {
 
 export default function Blogs(props: IBlogsProps) {
     return (
-        <MainLayout bannerBg='/assets/banner02.jpg'>
+        <MainLayout type='plan' bannerBg='/assets/banner02.jpg'>
             blog page
         </MainLayout>
     );

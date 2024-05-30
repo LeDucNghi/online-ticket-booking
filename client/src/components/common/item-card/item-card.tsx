@@ -7,6 +7,8 @@ import { Button, Divider, Paper } from '@mui/material';
 import BookOnlineIcon from '@mui/icons-material/BookOnline';
 import Image from "next/image";
 import InfoIcon from '@mui/icons-material/Info';
+import { Movie } from "@/models";
+import { useRouter } from "next/navigation";
 
 export interface IItemCardProps {
     title: string
@@ -14,12 +16,16 @@ export interface IItemCardProps {
 
     elevation?: number
 
+    movie: Movie
+
     direction: "vertical" | "horizontal"
 
     style?: React.CSSProperties
 }
 
-export function ItemCard({ title, direction, image, elevation, style }: IItemCardProps) {
+export function ItemCard({ title, direction, image, elevation, style, movie }: IItemCardProps) {
+    const router = useRouter()
+
     return (
         <div className="card-container" style={style}>
             <Paper className="card-wrapper" elevation={elevation}>
@@ -42,6 +48,7 @@ export function ItemCard({ title, direction, image, elevation, style }: IItemCar
                         <Button
                             variant="outlined"
                             endIcon={<BookOnlineIcon />}
+                            onClick={() => router.push(`/booking/movie-ticket/${movie.id}`)}
                         >
                             Books now
                         </Button>
@@ -49,6 +56,7 @@ export function ItemCard({ title, direction, image, elevation, style }: IItemCar
                         <Button
                             variant="outlined"
                             endIcon={<InfoIcon />}
+                            onClick={() => router.push(`/movie/${movie.id}`)}
                         >
                             See detail
                         </Button>

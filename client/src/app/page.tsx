@@ -5,7 +5,7 @@ import { movies } from "@/mock";
 export default function Home() {
 
   return (
-    <MainLayout bannerBg="/assets/banner02.jpg">
+    <MainLayout type="main" bannerBg="/assets/banner02.jpg">
       <HomeSection
         sectionSubtitle="Be sure not to miss these Movies today."
         sectionTitle="movies"

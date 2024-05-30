@@ -72,6 +72,7 @@ export const HomeSection = ({ sectionTitle, sectionSubtitle, list, style }: Home
                             key={key}
                             elevation={10}
                             style={{ width: "25%" }}
+                            movie={item}
                         />
                     })}
                 </div>

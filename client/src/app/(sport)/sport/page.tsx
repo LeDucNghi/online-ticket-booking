@@ -7,7 +7,7 @@ export interface ISportPageProps {
 
 export default function SportPage(props: ISportPageProps) {
     return (
-        <MainLayout bannerBg="/assets/banner02.jpg">
+        <MainLayout type='main' bannerBg="/assets/banner02.jpg">
             <p>sport page</p>
         </MainLayout>
     );

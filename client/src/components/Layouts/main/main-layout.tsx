@@ -8,12 +8,14 @@ export interface IMainLayoutProps {
   children: React.ReactNode
 
   bannerBg: string
+
+  type: "main" | "plan"
 }
 
-export function MainLayout({ children, bannerBg }: IMainLayoutProps) {
+export function MainLayout({ children, bannerBg, type }: IMainLayoutProps) {
   return (
     <>
-      <Banner bannerBg={bannerBg} />
+      <Banner type={type} bannerBg={bannerBg} />
 
       <div className='relative top-full pt-[6.25rem]'
         style={{ backgroundColor: "#001232" }}

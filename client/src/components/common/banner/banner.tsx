@@ -19,7 +19,7 @@ export interface IBannerProps {
 export function Banner({ bannerBg, type }: IBannerProps) {
     return (
         <>
-            {type === "main" ? <PlanBanner bannerBg={bannerBg} /> : <PageBanner bannerBg={bannerBg} />}
+            {type === "main" ? <PageBanner bannerBg={bannerBg} /> : <PlanBanner bannerBg={bannerBg} />}
         </>
     );
 }

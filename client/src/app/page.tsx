@@ -9,7 +9,7 @@ export default function Home() {
       bannerSubtitle="Buy movie tickets in advance, find movie times watch trailers, read movie reviews and much more"
       banner="main"
       bannerBg="/assets/banner02.jpg"
-      bannerTitle="get movie ticket"
+      bannerTitle="movie"
     >
       <HomeSection
         sectionSubtitle="Be sure not to miss these Movies today."

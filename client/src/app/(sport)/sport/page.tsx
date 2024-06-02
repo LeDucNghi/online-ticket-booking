@@ -7,7 +7,12 @@ export interface ISportPageProps {
 
 export default function SportPage(props: ISportPageProps) {
     return (
-        <MainLayout type='main' bannerBg="/assets/banner02.jpg">
+        <MainLayout
+            bannerTitle='football league tournament'
+            banner='main'
+            bannerBg="/assets/banner02.jpg"
+            bannerSubtitle='17 South Sherman Street Astoria, NY 11106'
+        >
             <p>sport page</p>
         </MainLayout>
     );

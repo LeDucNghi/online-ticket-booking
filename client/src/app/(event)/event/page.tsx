@@ -5,9 +5,13 @@ import { MainLayout } from '@/components/Layouts/main/main-layout';
 export interface IEventProps {
 }
 
-export default function Event(props: IEventProps) {
+export default function Events(props: IEventProps) {
     return (
-        <MainLayout type='main' bannerBg='/assets/banner02.jpg'>
+        <MainLayout
+            bannerTitle='events'
+            banner='main'
+            bannerBg='/assets/banner02.jpg'
+        >
             event page
         </MainLayout>
     );

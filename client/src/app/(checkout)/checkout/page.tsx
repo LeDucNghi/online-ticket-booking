@@ -7,7 +7,12 @@ export interface ICheckoutPageProps {
 
 export default function CheckoutPage(props: ICheckoutPageProps) {
     return (
-        <MainLayout type='plan' bannerBg="/assets/banner02.jpg">
+        <MainLayout
+            bannerTitle='venus'
+            bannerSubtitle='City Walk English - 2D'
+            banner='plan'
+            bannerBg="/assets/banner02.jpg"
+        >
             checkout page
         </MainLayout>
     );

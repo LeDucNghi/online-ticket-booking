@@ -9,13 +9,30 @@ export interface IMainLayoutProps {
 
   bannerBg: string
 
-  type: "main" | "plan"
+  banner: "main" | "plan"
+
+  bannerChildren?: React.ReactNode
+
+  bannerTitle: string
+  bannerSubtitle?: string
 }
 
-export function MainLayout({ children, bannerBg, type }: IMainLayoutProps) {
+export function MainLayout({
+  children,
+  bannerBg,
+  banner,
+  bannerChildren,
+  bannerSubtitle,
+  bannerTitle
+}: IMainLayoutProps) {
   return (
     <>
-      <Banner type={type} bannerBg={bannerBg} />
+      <Banner
+        bannerSubtitle={bannerSubtitle}
+        bannerTitle={bannerTitle}
+        type={banner}
+        bannerBg={bannerBg}
+      />
 
       <div className='relative top-full pt-[6.25rem]'
         style={{ backgroundColor: "#001232" }}

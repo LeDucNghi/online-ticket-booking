@@ -10,7 +10,12 @@ export interface IMovieSeatPlanProps {
 
 export default function MovieSeatPlan({ params: { id } }: IMovieSeatPlanProps) {
     return (
-        <MainLayout type='plan' bannerBg='/assets/banner02.jpg'>
+        <MainLayout
+            bannerTitle='venus'
+            bannerSubtitle='ENGLISH, HINDI, TELEGU, TAMIL'
+            banner='plan'
+            bannerBg='/assets/banner02.jpg'
+        >
             movie item seat plan
         </MainLayout>
     );

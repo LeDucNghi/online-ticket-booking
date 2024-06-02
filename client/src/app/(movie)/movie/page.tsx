@@ -7,7 +7,7 @@ export interface IpageProps {
 
 export default function Movies(props: IpageProps) {
     return (
-        <MainLayout type='main' bannerBg='/assets/banner02.jpg'>
+        <MainLayout bannerTitle='movie' banner='main' bannerBg='/assets/banner02.jpg'>
             movie page
         </MainLayout>
     );

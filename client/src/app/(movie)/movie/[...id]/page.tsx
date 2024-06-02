@@ -10,7 +10,7 @@ export interface IMovieProps {
 
 export default function MovieItemPage({ params: { id } }: IMovieProps) {
     return (
-        <MainLayout type='plan' bannerBg='/assets/banner02.jpg'>
+        <MainLayout bannerTitle='venus' banner='plan' bannerBg='/assets/banner02.jpg'>
             movie item page
         </MainLayout>
     );

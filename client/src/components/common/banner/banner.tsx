@@ -1,12 +1,16 @@
+"use client"
+
 import "./banner.scss";
 
 import * as React from 'react';
 
+import { CustomButton } from "../button/custom-button";
 import CustomSelect from "../custom-select/Select";
 import Image from 'next/image';
 import { Tab } from "../tab/tab";
 import { TextField } from "@mui/material";
 import { images } from '@/constants';
+import { useRouter } from "next/navigation";
 
 export interface IBannerProps {
     bannerBg: string
@@ -20,9 +24,11 @@ export interface IBannerProps {
 }
 
 export function Banner({ bannerBg, type, bannerSubtitle, bannerTitle, children }: IBannerProps) {
+
+    const router = useRouter()
+
     return (
         <div className={`banner-container ${type === "plan" ? "plan" : "main"}`} >
-
             <div className="banner-image">
                 <Image src={bannerBg} alt='banner image' priority layout="fill" />
             </div>
@@ -65,8 +71,24 @@ export function Banner({ bannerBg, type, bannerSubtitle, bannerTitle, children }
                     </div>
                 </Tab>
                 :
-                <div className="banner-footer">
-                    {children}
+                <div className="banner-footer flex-center">
+                    <div className="banner-title-area">
+                        <CustomButton
+                            active
+                            style={{ color: "white" }}
+                            onClick={() => router.back()}
+                        >
+                            Back
+                        </CustomButton>
+
+                        {children}
+
+                        {/* <Timer /> */}
+                        <div className="banner-countdown">
+                            <h5>05:00</h5>
+                            <p>Mins Left</p>
+                        </div>
+                    </div>
                 </div>
             }
         </div>

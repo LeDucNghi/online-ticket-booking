@@ -157,8 +157,35 @@
 
         background-color: #032055;
 
-        padding: 2.9rem 0;
+        color: white;
+
+        padding: 2.5rem 0;
         width: 100%;
+
+        z-index: 2;
+
+        .banner-title-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 70%;
+
+            .banner-countdown {
+                display: flex;
+                flex-direction: column;
+
+                h5 {
+                    font-size: 1.75rem;
+                    font-weight: 600;
+                }
+
+                p {
+                    font-size: 1.25rem;
+                    color: $gray;
+                }
+            }
+        }
     }
 }
 

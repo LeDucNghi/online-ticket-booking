@@ -32,7 +32,9 @@ export function MainLayout({
         bannerTitle={bannerTitle}
         type={banner}
         bannerBg={bannerBg}
-      />
+      >
+        {bannerChildren}
+      </Banner>
 
       <div className='relative top-full pt-[6.25rem]'
         style={{ backgroundColor: "#001232" }}

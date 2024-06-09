@@ -1,0 +1,13 @@
+@import "../../../public/styles/index.scss";
+
+.wrapper {
+    padding: 1.875rem;
+
+    background-color: #032055;
+
+    .wrapper-content {
+        h5 {
+            border-bottom: 0.1 solid $wrapper;
+        }
+    }
+}

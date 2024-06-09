@@ -1,0 +1,116 @@
+@import "../../../../public/styles/index.scss";
+
+.checkout-wrapper {
+    position: relative;
+
+    width: 75%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    .checkout-child {
+        padding: 0 0.9rem;
+    }
+
+    .checkout-info {
+        width: 65%;
+    }
+
+    .checkout-ticket {
+        width: 35%;
+
+        .booking-area {
+            background: $wrapper;
+
+            padding: 1.875rem 1.875rem 0.625rem;
+
+            .booking-summary {
+                h4 {
+                    text-transform: uppercase;
+                    font-size: 1.75rem;
+
+                    border-bottom: 0.1rem dashed $gray;
+
+                    text-align: center;
+                    color: white;
+                    font-weight: 600;
+
+                    padding: 0 0 1.4rem;
+                }
+
+                ul {
+                    width: 100%;
+
+                    border-bottom: 0.1rem dashed $gray;
+
+                    &.ticket-info {
+                        position: relative;
+
+                        &::before {
+                            content: "";
+
+                            position: absolute;
+                            bottom: -1.5rem;
+                            left: -3rem;
+
+                            width: 48px;
+                            height: 48px;
+                            background-color: #001232;
+                            border-radius: 50%;
+                        }
+
+                        &::after {
+                            content: "";
+
+                            position: absolute;
+                            bottom: -1.5rem;
+                            right: -3rem;
+
+                            width: 48px;
+                            height: 48px;
+                            background-color: #001232;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    li {
+                        width: 100%;
+
+                        display: flex;
+                        flex-wrap: nowrap;
+                        flex-direction: column;
+
+                        .subtitle,
+                        .info {
+                            font-weight: 600;
+
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+
+                .ticket-price {
+                    .info {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+
+        .proceed-area {
+            padding: 1.875rem;
+
+            background: #05245c;
+
+            .subtitle {
+                display: flex;
+                justify-content: space-between;
+
+                font-weight: 600;
+            }
+        }
+    }
+}

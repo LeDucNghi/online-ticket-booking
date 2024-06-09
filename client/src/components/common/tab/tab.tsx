@@ -13,16 +13,18 @@ export interface ISearchTabProps {
   subtitle?: string
   className?: string
   bgUrl?: string
+
+  elevation?: number
 }
 
-export function Tab({ children, style, className, bgUrl, title, subtitle }: ISearchTabProps) {
+export function Tab({ children, style, className, bgUrl, title, subtitle, elevation }: ISearchTabProps) {
   return (
     <Paper style={{
       ...style,
       backgroundImage: `url(${bgUrl})`,
     }}
       className={`${className} tab-container`}
-      elevation={5}
+      elevation={elevation ? elevation : 5}
     >
       <div className="tab-header">
         <h6>{title ? title : "welcome to bolero"} </h6>

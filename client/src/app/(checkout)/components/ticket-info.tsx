@@ -1,16 +1,13 @@
-import "../checkout/page.scss"
-
 import * as React from 'react';
 
 import { CustomButton } from '@/components/common/button/custom-button';
 import { Paper } from '@mui/material';
 
 export interface ITicketInfoProps {
-    hasCombo: boolean
-
+    // hasCombo: boolean
 }
 
-export default function TicketInfo({ hasCombo }: ITicketInfoProps) {
+export function TicketInfo(props: ITicketInfoProps) {
     return (
         <div className="checkout-ticket checkout-child">
             <Paper className="booking-area">

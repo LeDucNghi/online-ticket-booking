@@ -2,6 +2,9 @@ import "../checkout/page.scss"
 
 import * as React from 'react';
 
+import { CheckoutContactForm } from "./checkout-contact-form";
+import CheckoutPaymentForm from "./checkout-payment-form";
+import CheckoutPromo from "./checkout-promo";
 import { IconButton } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 import WrapperWidgets from '@/widgets/wrapper/wrapper-widget';
@@ -31,20 +34,20 @@ export default function CheckoutInfo(props: ICheckoutInfoProps) {
                 style={{ marginBottom: "1.875rem" }}
                 title="Share your Contact Details"
             >
-                <p>content</p>
+                <CheckoutContactForm />
             </WrapperWidgets>
 
             <WrapperWidgets
                 style={{ marginBottom: "1.875rem" }}
                 title="Promo Code"
             >
-                <p>content</p>
+                <CheckoutPromo />
             </WrapperWidgets>
 
             <WrapperWidgets
                 title="Payment Option"
             >
-                <p>content</p>
+                <CheckoutPaymentForm />
             </WrapperWidgets>
         </div>
     );

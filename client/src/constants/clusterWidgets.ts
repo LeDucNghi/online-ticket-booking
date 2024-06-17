@@ -14,3 +14,21 @@ export const authSocial = [
     icon: images.twitter,
   },
 ];
+
+export const paymentMethods = [
+  {
+    id: 1,
+    img: images.creditCard,
+    name: "credit card",
+  },
+  {
+    id: 2,
+    img: images.debitCard,
+    name: "debit card",
+  },
+  {
+    id: 3,
+    img: images.paypalCard,
+    name: "paypal",
+  },
+];

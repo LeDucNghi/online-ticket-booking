@@ -2,17 +2,20 @@
     color: white;
 
     & label {
-        color: orange;
+        color: white;
 
         &.Mui-focused {
-            color: orange;
+            color: white;
             font-weight: 600;
         }
     }
     // focused color for input with variant='standard'
-    & .MuiInput-underline:after {
-        border-bottom-color: orange;
-        color: orange;
+    & .MuiInput-underline::before {
+        border-bottom-color: white;
+    }
+
+    & .MuiInput-underline::after {
+        border-bottom-color: white;
     }
 
     // .MuiInput-root {
@@ -21,11 +24,10 @@
     //     }
     // }
 
-    // focused color for input with variant='filled'
     & .MuiFilledInput-underline:after {
         border-bottom-color: orange;
     }
-    // focused color for input with variant='outlined'
+
     & .MuiOutlinedInput-root {
         &.Mui-focused fieldset {
             border-color: orange;

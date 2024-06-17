@@ -2,7 +2,7 @@ import "./wrapper.scss";
 
 import * as React from 'react';
 
-import { Paper } from '@mui/material';
+import { Divider, Paper } from '@mui/material';
 
 export interface IWrapperWidgetsProps {
   elevation?: number

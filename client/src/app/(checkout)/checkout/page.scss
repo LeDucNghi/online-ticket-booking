@@ -17,76 +17,99 @@
         width: 65%;
 
         .checkout-payment {
-            ul {
-                display: flex;
+            .notice {
+                color: #7da2d3;
 
-                li {
-                    padding: 0.9rem;
+                margin-top: 0.25rem;
 
-                    width: 7.5rem;
-                    height: 8.125rem;
+                a {
+                    color: #3967e8;
+                }
+            }
 
-                    button {
-                        width: 100%;
-                        height: 100%;
+            form {
+                ul {
+                    display: flex;
 
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
+                    li {
+                        padding: 0.9rem;
 
-                        border: 0.125rem solid #ccc;
-                        border-radius: 0.625rem;
+                        width: 7.5rem;
+                        height: 8.125rem;
 
-                        padding: 1rem;
+                        button {
+                            width: 100%;
+                            height: 100%;
 
-                        text-align: center;
-                        font-size: 0.75rem;
-                        color: white;
-                        font-weight: 600;
-                        text-wrap: nowrap;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
 
-                        img {
-                            @include img-fit(90%, 60%, contain);
+                            border: 0.125rem solid #11326f;
+                            border-radius: 0.625rem;
 
-                            margin: 0 0 0.625rem;
-                        }
+                            padding: 1.2rem;
 
-                        &.active {
-                            border: 0.125rem solid #4441e7;
+                            margin: 0 -1rem 0;
 
-                            transition: all 0.3s ease-in-out 0s;
+                            text-align: center;
+                            font-size: 0.75rem;
+                            color: white;
+                            font-weight: 600;
+                            text-wrap: nowrap;
 
-                            &::before {
-                                content: "";
+                            img {
+                                @include img-fit(100%, 70%, contain);
 
-                                background: #032055;
-
-                                width: 40px;
-                                height: 40px;
-
-                                border-radius: 50%;
-
-                                position: absolute;
-                                top: -20px;
-                                right: -20px;
+                                margin: 0 0 0.625rem;
                             }
 
-                            &::after {
-                                content: "";
+                            &.active {
+                                border: 0.125rem solid #4441e7;
 
-                                width: 30px;
-                                height: 30px;
-                                border-radius: 50%;
+                                transition: all 0.3s ease-in-out 0s;
 
-                                position: absolute;
-                                top: -15px;
-                                right: -15px;
+                                &::before {
+                                    content: "";
 
-                                background: url(../../../../public/assets/icons/check.png) no-repeat center center;
-                                background-size: cover;
+                                    background: #032055;
+
+                                    width: 40px;
+                                    height: 40px;
+
+                                    border-radius: 50%;
+
+                                    position: absolute;
+                                    top: -20px;
+                                    right: -20px;
+                                }
+
+                                &::after {
+                                    content: "";
+
+                                    width: 30px;
+                                    height: 30px;
+                                    border-radius: 50%;
+
+                                    position: absolute;
+                                    top: -15px;
+                                    right: -15px;
+
+                                    background: url(../../../../public/assets/icons/check.png) no-repeat center center;
+                                    background-size: cover;
+
+                                    -webkit-transition: background 0.2s ease-in-out;
+                                    transition: background 0.2s ease-in-out;
+                                }
                             }
                         }
                     }
+                }
+
+                .subtitle {
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -105,7 +128,7 @@
                     text-transform: uppercase;
                     font-size: 1.75rem;
 
-                    border-bottom: 0.1rem dashed $gray;
+                    border-bottom: 0.08rem dashed #11326f;
 
                     text-align: center;
                     color: white;
@@ -117,7 +140,7 @@
                 ul {
                     width: 100%;
 
-                    border-bottom: 0.1rem dashed $gray;
+                    border-bottom: 0.08rem dashed #11326f;
 
                     &.ticket-info {
                         position: relative;

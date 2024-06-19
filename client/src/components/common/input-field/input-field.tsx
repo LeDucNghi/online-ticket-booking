@@ -16,8 +16,10 @@ export type IInputFieldProps<T extends FieldValues> =
 
         label: string
         className?: string
+        placeholder?: string
 
         autoFocus?: boolean
+        fullWidth?: boolean
     }
 
 export function InputField<T extends FieldValues>(
@@ -29,7 +31,9 @@ export function InputField<T extends FieldValues>(
         className,
         type,
         style,
-        autoFocus
+        autoFocus,
+        fullWidth,
+        placeholder
     }: IInputFieldProps<T>) {
     return (
         <Controller
@@ -41,7 +45,7 @@ export function InputField<T extends FieldValues>(
                 return (
                     <TextField
                         id="standard-basic"
-                        fullWidth
+                        fullWidth={fullWidth}
                         autoFocus={autoFocus}
                         style={style}
                         color='success'
@@ -51,11 +55,13 @@ export function InputField<T extends FieldValues>(
                         value={value}
                         label={label}
                         type={type}
+                        placeholder={placeholder}
                         variant={variant ? variant : "standard"}
                         autoComplete='off'
                         error={!!error}
                         helperText={error ? error.message : null}
                         inputRef={ref}
+
                     />
                 )
             }}

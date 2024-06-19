@@ -12,7 +12,7 @@ export default function Checkout() {
             banner='plan'
             bannerBg="/assets/banner02.jpg"
         >
-            <div className="checkout-wrapper py-[7.5rem]">
+            <div className="checkout-wrapper pb-[7.5rem]">
                 <CheckoutInfo />
 
                 <TicketInfo />

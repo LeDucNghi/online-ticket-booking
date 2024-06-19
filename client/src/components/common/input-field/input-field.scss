@@ -9,28 +9,45 @@
             font-weight: 600;
         }
     }
-    // focused color for input with variant='standard'
+
+    // .MuiInput-root {
+    //     &:hover:not(.Mui-focused) {
+    //         &:before {
+    //             border-bottom-color: white;
+    //             // border-width: 2px;
+    //         }
+    //     }
+    // }
+
     & .MuiInput-underline::before {
         border-bottom-color: white;
+
+        &:hover {
+            border-bottom-color: white;
+        }
     }
 
     & .MuiInput-underline::after {
         border-bottom-color: white;
     }
 
-    // .MuiInput-root {
-    //     &.Mui-focused {
-    //         color: white;
-    //     }
+    // & .MuiFilledInput-underline:after {
+    //     border-bottom-color: white;
     // }
 
-    & .MuiFilledInput-underline:after {
-        border-bottom-color: orange;
-    }
-
     & .MuiOutlinedInput-root {
+        fieldset {
+            border-color: #11326f;
+            transition: all 0.2s ease-in-out;
+        }
+
         &.Mui-focused fieldset {
-            border-color: orange;
+            border-color: #11326f;
+        }
+
+        &:hover fieldset {
+            border-color: #ccc;
+            transition: all 0.2s ease-in-out;
         }
     }
 }

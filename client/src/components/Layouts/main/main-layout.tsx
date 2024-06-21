@@ -3,6 +3,7 @@ import "./main-layout.scss";
 import * as React from 'react';
 
 import { Banner } from "@/components/common/banner/banner";
+import PageTransition from "@/components/common/loading/page-transition";
 
 export interface IMainLayoutProps {
   children: React.ReactNode

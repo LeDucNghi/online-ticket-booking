@@ -19,21 +19,26 @@
     //     }
     // }
 
+    input,
+    input:focus {
+        -webkit-text-fill-color: white;
+    }
+
     & .MuiInput-underline::before {
         border-bottom-color: white;
+    }
 
-        &:hover {
-            border-bottom-color: white;
-        }
+    & .MuiInput-underline:hover:before {
+        border-bottom-color: white;
     }
 
     & .MuiInput-underline::after {
         border-bottom-color: white;
     }
 
-    // & .MuiFilledInput-underline:after {
-    //     border-bottom-color: white;
-    // }
+    & .MuiInput-underline:hover:after {
+        border-bottom-color: white;
+    }
 
     & .MuiOutlinedInput-root {
         fieldset {

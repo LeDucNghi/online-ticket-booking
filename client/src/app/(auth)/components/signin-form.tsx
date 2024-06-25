@@ -32,7 +32,7 @@ export function SignInForm(props: ISignInFormProps) {
     const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
             <InputField
                 name="email"
                 label="Enter Your Email"

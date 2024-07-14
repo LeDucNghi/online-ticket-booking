@@ -1,29 +1,35 @@
 import CredentialsProvider from "next-auth/providers/credentials";
 import { NextAuthOptions } from "next-auth";
+import { User } from "@/models";
+import { authApi } from "@/api-client";
+import axios from "axios";
 
 export const options: NextAuthOptions = {
 	providers: [
 		CredentialsProvider({
 			name: "Credentials",
 			credentials: {
-				username: {
-					label: "username:",
-					type: "text",
-					placeholder: "your cool username",
+				email: {
+					type: "email",
 				},
 
 				password: {
-					label: "your password:",
 					type: "password",
-					placeholder: "your cool password",
 				},
 			},
 
 			async authorize(credentials) {
-				const user = { id: "1", name: "Nghi", password: "nextauth" };
+				if (credentials) {
+					try {
+						const res = await axios.post("http://localhost:3001/auth/signup", {
+							email: credentials.email,
+							password: credentials.password,
+						});
 
-				if (credentials?.username === user.name && credentials?.password === user.password) {
-					return user;
+						return res.data;
+					} catch (error) {
+						console.log("🚀 ~ authorize ~ error:", error);
+					}
 				} else {
 					return null;
 				}

@@ -10,6 +10,8 @@ import { CustomCheckbox } from "@/components/common/checkbox/checkbox";
 import { InputField } from "@/components/common/input-field/input-field";
 import Link from "next/link";
 import { LoadingButton } from "@mui/lab";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export interface ISignUpFormProps {}
 
@@ -20,6 +22,7 @@ type Inputs = {
 };
 
 export default function SignUpForm(props: ISignUpFormProps) {
+	const router = useRouter();
 	const {
 		register,
 		handleSubmit,
@@ -33,7 +36,17 @@ export default function SignUpForm(props: ISignUpFormProps) {
 		},
 	});
 
-	const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+	const onSubmit: SubmitHandler<Inputs> = async (data) => {
+		const res = await signIn("credentials", {
+			username: data.email,
+			password: data.password,
+			redirect: false,
+		});
+
+		if (!res?.error) {
+			router.push("/");
+		}
+	};
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>

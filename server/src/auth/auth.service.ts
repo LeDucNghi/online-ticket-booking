@@ -1,4 +1,9 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import {
+  HttpException,
+  HttpStatus,
+  Injectable,
+  UnauthorizedException,
+} from '@nestjs/common';
 
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from '../users/users.service';
@@ -23,5 +28,22 @@ export class AuthService {
     return {
       access_token: await this.jwtService.signAsync(payload),
     };
+  }
+
+  async signUp(email: string, password: string): Promise<any> {
+    // const user = await this.usersService.findOne(username);
+
+    const newUser = await this.usersService.create(email, password);
+
+    return newUser;
+
+    // if (user) {
+    //   throw new HttpException(
+    //     'This user already existed 🤔',
+    //     HttpStatus.BAD_REQUEST,
+    //   );
+    // } else {
+
+    // }
   }
 }

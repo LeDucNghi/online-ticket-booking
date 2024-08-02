@@ -1,7 +1,5 @@
 import CredentialsProvider from "next-auth/providers/credentials";
 import { NextAuthOptions } from "next-auth";
-import { User } from "@/models";
-import { authApi } from "@/api-client";
 import axios from "axios";
 
 export const options: NextAuthOptions = {
@@ -21,7 +19,7 @@ export const options: NextAuthOptions = {
 			async authorize(credentials) {
 				if (credentials) {
 					try {
-						const res = await axios.post("http://localhost:3001/auth/signup", {
+						const res = await axios.post("http://localhost:3001/auth/signin", {
 							email: credentials.email,
 							password: credentials.password,
 						});

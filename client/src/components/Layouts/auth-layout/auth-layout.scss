@@ -1,0 +1,27 @@
+.auth-layout {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../../../assets/images/auth-bg.jpg);
+    background-position: center;
+    background-repeat: none;
+    background-size: contain;
+
+    &::before {
+        content: "";
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        inset: 0;
+
+        background-color: rgba(255, 255, 255, 0.4);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+}

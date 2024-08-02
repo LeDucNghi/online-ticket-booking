@@ -2,15 +2,12 @@
 
 import "./form.scss";
 
-import * as React from "react";
-
 import { SubmitHandler, useForm } from "react-hook-form";
 
 import { CustomCheckbox } from "@/components/common/checkbox/checkbox";
 import { InputField } from "@/components/common/input-field/input-field";
-import Link from "next/link";
 import { LoadingButton } from "@mui/lab";
-import { signIn } from "next-auth/react";
+import { signup } from "@/lib/sign-up";
 import { useRouter } from "next/navigation";
 
 export interface ISignUpFormProps {}
@@ -24,9 +21,7 @@ type Inputs = {
 export default function SignUpForm(props: ISignUpFormProps) {
 	const router = useRouter();
 	const {
-		register,
 		handleSubmit,
-		watch,
 		control,
 		formState: { errors, isSubmitting },
 	} = useForm<Inputs>({
@@ -37,19 +32,13 @@ export default function SignUpForm(props: ISignUpFormProps) {
 	});
 
 	const onSubmit: SubmitHandler<Inputs> = async (data) => {
-		const res = await signIn("credentials", {
-			username: data.email,
-			password: data.password,
-			redirect: false,
-		});
+		await signup(data.email, data.password);
 
-		if (!res?.error) {
-			router.push("/");
-		}
+		await router.push(`/auth/signin`);
 	};
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
+		<form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
 			<InputField
 				name="email"
 				label="Enter Your Email"

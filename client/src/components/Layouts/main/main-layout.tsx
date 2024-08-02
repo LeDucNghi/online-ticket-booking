@@ -3,8 +3,7 @@ import "./main-layout.scss";
 import * as React from "react";
 
 import { Banner } from "@/components/common/banner/banner";
-import { getServerSession } from "next-auth";
-import { options } from "@/app/api/auth/[...nextauth]/options";
+import { Metadata } from "next";
 
 export interface IMainLayoutProps {
 	children: React.ReactNode;
@@ -19,7 +18,7 @@ export interface IMainLayoutProps {
 	bannerSubtitle?: string;
 }
 
-export async function MainLayout({
+export function MainLayout({
 	children,
 	bannerBg,
 	banner,
@@ -27,8 +26,6 @@ export async function MainLayout({
 	bannerSubtitle,
 	bannerTitle,
 }: IMainLayoutProps) {
-	const session = await getServerSession(options);
-
 	return (
 		<>
 			<Banner
@@ -40,7 +37,10 @@ export async function MainLayout({
 				{bannerChildren}
 			</Banner>
 
-			<div className="relative top-full pt-[6.25rem]" style={{ backgroundColor: "#001232" }}>
+			<div
+				className="relative top-full pt-[6.25rem]"
+				style={{ backgroundColor: "#001232" }}
+			>
 				{children}
 			</div>
 		</>

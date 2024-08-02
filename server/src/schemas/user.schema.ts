@@ -16,6 +16,21 @@ export class User {
   @Prop()
   avatar: string;
 
+  @Prop({ required: true })
+  gender: 'male' | 'female';
+
+  @Prop()
+  birthdate: Date;
+
+  @Prop()
+  created_at: Date;
+
+  @Prop()
+  updated_at: Date;
+
+  @Prop()
+  preferred_payment_method: string;
+
   @Prop({ type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Ticket' }] })
   tickets: Ticket[];
 }

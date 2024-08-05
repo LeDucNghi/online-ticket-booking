@@ -1,7 +1,3 @@
-import * as React from "react";
-
-export interface IDrawerProps {}
-
-export function Drawer(props: IDrawerProps) {
+export function Drawer() {
   return <div className="drawer-container"></div>;
 }

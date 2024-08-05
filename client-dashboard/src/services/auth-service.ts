@@ -1,9 +1,13 @@
-import { SignIn, User } from "../models";
+import { SignInPayload, SignUpPayload, User } from "../models";
 
 import { axiosClient } from "./api-client";
 
 export const authService = {
-  signin(params: SignIn): Promise<User> {
-    return axiosClient.post("/signin", params);
+  signin(params: SignInPayload): Promise<User> {
+    return axiosClient.post("/auth/signin", params);
+  },
+
+  createUser(params: SignUpPayload): Promise<User> {
+    return axiosClient.post("/auth/signup", params);
   },
 };

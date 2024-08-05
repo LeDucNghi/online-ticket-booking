@@ -1,10 +1,9 @@
 import axios, { AxiosError } from "axios";
 
-import { User } from "../models";
 import { cookies } from "../utils";
 
 export const axiosClient = axios.create({
-  baseURL: `http://localhost:3002/api`,
+  baseURL: `http://localhost:3001/`,
   headers: {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
@@ -15,10 +14,10 @@ export const axiosClient = axios.create({
 
 axiosClient.interceptors.request.use(
   function (config) {
-    const user: User = cookies.getCookie("user");
+    const user = cookies.getCookie("user");
 
     if (user) {
-      config.headers.Authorization = `Bearer ${user.token}`;
+      config.headers.Authorization = `Bearer ${user._doc.access_token}`;
     }
 
     return config;

@@ -15,7 +15,7 @@ export class AuthController {
     schema: { oneOf: [{ type: 'string' }, { type: 'integer' }] },
   })
   signIn(@Body() signInDto: Record<string, any>) {
-    return this.authService.signIn(signInDto.username, signInDto.password);
+    return this.authService.signIn(signInDto.email, signInDto.password);
   }
 
   @HttpCode(HttpStatus.OK)

@@ -9,6 +9,12 @@ export interface SignInPayload {
   password: string;
 }
 
+export interface SignUpPayload {
+  email: string;
+  password: string;
+  username: string;
+}
+
 export interface User {
   email: string;
   password?: string;
@@ -19,5 +25,5 @@ export interface User {
   updated_at?: Date;
   preferred_payment_method: string;
   ticket: Ticket[];
-  token?: string;
+  access_token?: string;
 }

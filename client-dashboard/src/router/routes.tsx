@@ -1,6 +1,6 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 
-import Dashboard from "../features/dashboard/pages/main";
+import Dashboard from "../features/dashboard/pages/dashboard";
 import Report from "../features/dashboard/pages/report";
 import SignIn from "../features/auth/pages/sign-in";
 

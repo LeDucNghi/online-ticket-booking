@@ -23,8 +23,8 @@ export class UsersService {
     },
   ];
 
-  async findOne(username: string): Promise<Users | undefined> {
-    return this.users.find((user) => user.username === username);
+  async findOne(email: string): Promise<Users | undefined> {
+    return this.userModel.findOne({ email: email });
   }
 
   async create(email: string, password: string): Promise<User> {

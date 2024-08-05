@@ -1,7 +1,3 @@
-import * as React from "react";
-
-export interface IReportProps {}
-
-export default function Report(props: IReportProps) {
+export default function Report() {
   return <div>report page</div>;
 }

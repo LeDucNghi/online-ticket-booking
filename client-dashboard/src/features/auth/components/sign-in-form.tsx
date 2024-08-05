@@ -52,7 +52,7 @@ export function SignInForm({ onSubmit }: ISignInFormProps) {
       />
 
       <InputField
-        name="email"
+        name="password"
         control={control}
         label="Password"
         type="password"
@@ -72,6 +72,7 @@ export function SignInForm({ onSubmit }: ISignInFormProps) {
           isLoading={isSubmitting}
           loadingText="Submitting"
           colorScheme="teal"
+          type="submit"
         >
           Sign In
         </Button>

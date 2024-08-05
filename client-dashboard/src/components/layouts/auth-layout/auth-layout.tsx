@@ -12,6 +12,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+import { cookies } from "../../../utils";
+import { redirect } from "react-router-dom";
 import { useTitle } from "../../../hooks";
 
 export interface IAuthLayoutProps {
@@ -23,6 +25,14 @@ export interface IAuthLayoutProps {
 
 export function AuthLayout({ children, title, subtitle }: IAuthLayoutProps) {
   useTitle({ title: "Bolero Dashboard | Sign In" });
+
+  const authenticatedUser = cookies.getCookie("user");
+
+  React.useEffect(() => {
+    if (authenticatedUser) {
+      redirect("/dashboard");
+    }
+  }, [authenticatedUser]);
 
   return (
     <div className="auth-layout">

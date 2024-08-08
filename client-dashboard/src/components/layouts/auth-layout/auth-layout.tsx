@@ -12,8 +12,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+import { Navigate } from "react-router-dom";
 import { cookies } from "../../../utils";
-import { redirect } from "react-router-dom";
+import { selectSignInStatus } from "../../../features/auth/auth-slice";
+import { useAppSelector } from "../../../app/store";
 import { useTitle } from "../../../hooks";
 
 export interface IAuthLayoutProps {
@@ -27,12 +29,9 @@ export function AuthLayout({ children, title, subtitle }: IAuthLayoutProps) {
   useTitle({ title: "Bolero Dashboard | Sign In" });
 
   const authenticatedUser = cookies.getCookie("user");
+  const isSignedIn = useAppSelector(selectSignInStatus);
 
-  React.useEffect(() => {
-    if (authenticatedUser) {
-      redirect("/dashboard");
-    }
-  }, [authenticatedUser]);
+  if (isSignedIn || authenticatedUser) return <Navigate to="/dashboard" />;
 
   return (
     <div className="auth-layout">

@@ -2,6 +2,7 @@ import { Ticket } from "./ticket";
 
 export interface AuthState {
   isAuthenticated: boolean;
+  isSignedIn: boolean;
 }
 
 export interface SignInPayload {

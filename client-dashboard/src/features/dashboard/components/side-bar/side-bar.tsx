@@ -1,54 +1,32 @@
 import "./side-bar.scss";
 
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-  Box,
-} from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
+import { dashboardSidebar } from "../../../../constants";
+import { useNavigate } from "react-router-dom";
 
 export interface ISideBarProps {}
 
 export function SideBar() {
+  const navigate = useNavigate();
+
   return (
     <div className="side-bar-container">
-      <Accordion allowToggle>
-        <AccordionItem>
-          <h2>
-            <AccordionButton>
-              <Box as="span" flex="1" textAlign="left">
-                Section 1 title
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </h2>
-          <AccordionPanel pb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </AccordionPanel>
-        </AccordionItem>
-
-        <AccordionItem>
-          <h2>
-            <AccordionButton>
-              <Box as="span" flex="1" textAlign="left">
-                Section 1 title
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </h2>
-          <AccordionPanel pb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion>
+      {dashboardSidebar.map((x, key) => {
+        return (
+          <Button
+            className="side-bar-button"
+            onClick={() => navigate(`${x.route}`)}
+            colorScheme="teal"
+            variant="ghost"
+            key={key}
+            leftIcon={
+              <img className="side-bar-icons" src={x.icon} alt={x.name} />
+            }
+          >
+            {x.name}
+          </Button>
+        );
+      })}
     </div>
   );
 }

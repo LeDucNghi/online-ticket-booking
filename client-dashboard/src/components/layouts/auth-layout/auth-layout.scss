@@ -8,8 +8,8 @@
 
     background-image: url(../../../assets/images/auth-bg.jpg);
     background-position: center;
-    background-repeat: none;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &::before {
         content: "";

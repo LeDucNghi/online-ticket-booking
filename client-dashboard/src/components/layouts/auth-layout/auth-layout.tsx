@@ -28,8 +28,8 @@ export interface IAuthLayoutProps {
 export function AuthLayout({ children, title, subtitle }: IAuthLayoutProps) {
   useTitle({ title: "Bolero Dashboard | Sign In" });
 
-  const authenticatedUser = cookies.getCookie("user");
   const isSignedIn = useAppSelector(selectSignInStatus);
+  const authenticatedUser = cookies.getCookie("user");
 
   if (isSignedIn || authenticatedUser) return <Navigate to="/dashboard" />;
 
